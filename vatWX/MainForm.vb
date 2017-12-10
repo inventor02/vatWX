@@ -73,7 +73,7 @@ Public Class MainForm
         CustomResultCopyButton.Enabled = True
     End Sub
 
-    Function GetMetar(station As String)
+    Function GetMetar(station As String) As String
         Dim client As RestClient = New RestClient(My.Settings.APIEndpoint)
 
         Dim request As RestRequest = New RestRequest("metar.php", Method.GET)
