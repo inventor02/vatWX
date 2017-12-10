@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>vatWX</id>
+        <version>0.0.0</version>
+        <title>vatWX</title>
+        <authors>George Peppard</authors>
+        <projectUrl>https://github.com/inventor02/vatWX</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Easily get VATSIM weather for your route, or any station of your choice.</description>
+        <releaseNotes />
+        <copyright>Copyright (c) George Peppard 2017</copyright>
+        <language>en-GB</language>
+    </metadata>
+    <files>
+        <file src="*.*" target="lib\net45\" exclude="*.pdb;*.nupkg;*.vshost.*"/>
+    </files>
+</package>
