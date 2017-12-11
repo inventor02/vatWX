@@ -120,4 +120,29 @@ Public Class MainForm
     Private Sub AttributionLinkLabel_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles AttributionLinkLabel.LinkClicked
         Process.Start("https://georgepeppard.me/")
     End Sub
+
+    Private Sub RouteResultDepartureTextBox_MouseHover(sender As Object, e As EventArgs) Handles RouteResultDepartureTextBox.MouseHover
+        MainFormToolTip.Show(RouteResultDepartureTextBox.Text, RouteResultDepartureTextBox)
+    End Sub
+
+    Private Sub RouteResultDestinationTextBox_MouseHover(sender As Object, e As EventArgs) Handles RouteResultDestinationTextBox.MouseHover
+        MainFormToolTip.Show(RouteResultDestinationTextBox.Text, RouteResultDestinationTextBox)
+    End Sub
+
+    Private Sub RouteResultAlternateTextBox_MouseHover(sender As Object, e As EventArgs) Handles RouteResultAlternateTextBox.MouseHover
+        MainFormToolTip.Show(RouteResultAlternateTextBox.Text, RouteResultAlternateTextBox)
+    End Sub
+
+    Private Sub CustomResultTextBox_MouseHover(sender As Object, e As EventArgs) Handles CustomResultTextBox.MouseHover
+        MainFormToolTip.Show(CustomResultTextBox.Text, CustomResultTextBox)
+    End Sub
+
+    Private Sub MainTabControl_SelectedIndexChanged(sender As Object, e As EventArgs) Handles MainTabControl.SelectedIndexChanged
+        Select Case MainTabControl.SelectedIndex
+            Case 0
+                Me.AcceptButton = RouteDownloadButton
+            Case Else
+                Me.AcceptButton = CustomDownloadButton
+        End Select
+    End Sub
 End Class
